@@ -1,0 +1,12 @@
+prompts:
+  - file: tests/test_sample.py
+
+providers:
+  - local:python
+
+tests:
+  - vars:
+      input: "questions.txt"
+    assert:
+      - type: json_array_length
+        value: 4
