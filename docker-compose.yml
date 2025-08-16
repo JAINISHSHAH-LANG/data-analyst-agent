@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  data-analyst-agent:
+    build: .
+    container_name: data-analyst-agent
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app   # Mount local code into container for live updates
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
