@@ -1,0 +1,22 @@
+name: Test Email Step Workflow
+
+# Triggers: manual or on any push to main
+on:
+  workflow_dispatch:   # allows manual trigger
+  push:
+    branches:
+      - main          # change to your branch if not 'main'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: 24f1002326@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
+
+
+
+
